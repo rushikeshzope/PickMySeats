@@ -1,0 +1,452 @@
+﻿[33mΓ¥»[39m Building...
+[32mΓ£ö[39m Building...
+Application bundle generation failed. [2.409 seconds] - 2026-03-05T09:17:56.665Z
+
+npx : [1m[31m[31mX 
+[41;31m[[41;97mERROR
+[41;31m][0m 
+[1mNG2012: Component 
+imports must be 
+standalone 
+components, 
+directives, pipes, or 
+must be 
+NgModules.[0m 
+[1m[35m[plugin 
+angular-compiler][0m
+At line:1 char:1
++ npx ng build 2>&1 | 
+Out-File -FilePath C:\
+Users\sahil\OneDrive\D
+eskto ...
++ ~~~~~~~~~~~~~~~~~
+    + CategoryInfo    
+          : NotSpeci  
+  fied: ([1m[31m   
+ [31mX...r-compile    
+r][0m:String) []    
+, RemoteException
+    + FullyQualifiedE 
+   rrorId : NativeCo  
+  mmandError
+ 
+
+    src/app/app.compon
+ent.ts:8:28:
+[37m      8 Γöé     
+imports: 
+[RouterOutlet, [32mNa
+vbarComponent[37m],
+        Γò╡           
+                  [32
+m~~~~~~~~~~~~~~~[0m
+
+
+[31mX [41;31m[[41;9
+7mERROR[41;31m][0m 
+[1mTS2307: Cannot 
+find module '../../env
+ironments/environment'
+ or its corresponding 
+type 
+declarations.[0m 
+[1m[35m[plugin 
+angular-compiler][0m
+
+    src/app/core/servi
+ces/analytics.service.
+ts:3:28:
+[37m      3 Γöé 
+import { environment 
+} from [32m'../../env
+ironments/environment'
+[37m;
+        Γò╡           
+                  [32
+m~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~[0m
+
+
+[31mX [41;31m[[41;9
+7mERROR[41;31m][0m 
+[1mTS2307: Cannot 
+find module '../../env
+ironments/environment'
+ or its corresponding 
+type 
+declarations.[0m 
+[1m[35m[plugin 
+angular-compiler][0m
+
+    src/app/core/servi
+ces/auth.service.ts:4:
+28:
+[37m      4 Γöé 
+import { environment 
+} from [32m'../../env
+ironments/environment'
+[37m;
+        Γò╡           
+                  [32
+m~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~[0m
+
+
+[31mX [41;31m[[41;9
+7mERROR[41;31m][0m 
+[1mTS2307: Cannot 
+find module '../../env
+ironments/environment'
+ or its corresponding 
+type 
+declarations.[0m 
+[1m[35m[plugin 
+angular-compiler][0m
+
+    src/app/core/servi
+ces/event.service.ts:4
+:28:
+[37m      4 Γöé 
+import { environment 
+} from [32m'../../env
+ironments/environment'
+[37m;
+        Γò╡           
+                  [32
+m~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~[0m
+
+
+[31mX [41;31m[[41;9
+7mERROR[41;31m][0m 
+[1mTS2307: Cannot 
+find module '../../env
+ironments/environment'
+ or its corresponding 
+type 
+declarations.[0m 
+[1m[35m[plugin 
+angular-compiler][0m
+
+    src/app/core/servi
+ces/ticket.service.ts:
+4:28:
+[37m      4 Γöé 
+import { environment 
+} from [32m'../../env
+ironments/environment'
+[37m;
+        Γò╡           
+                  [32
+m~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~[0m
+
+
+[31mX [41;31m[[41;9
+7mERROR[41;31m][0m 
+[1mTS2307: Cannot 
+find module '../../../
+core/services/event.se
+rvice' or its 
+corresponding type 
+declarations.[0m 
+[1m[35m[plugin 
+angular-compiler][0m
+
+    src/app/features/d
+ashboard/dashboard.com
+ponent.ts:4:36:
+[37m      4 Γöé ... 
+EventService, Event } 
+from [32m'../../../co
+re/services/event.serv
+ice'[37m;
+        Γò╡           
+                     
+[32m~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~[
+0m
+
+
+[31mX [41;31m[[41;9
+7mERROR[41;31m][0m 
+[1mTS2307: Cannot 
+find module '../../../
+core/services/ticket.s
+ervice' or its 
+corresponding type 
+declarations.[0m 
+[1m[35m[plugin 
+angular-compiler][0m
+
+    src/app/features/d
+ashboard/dashboard.com
+ponent.ts:5:38:
+[37m      5 Γöé 
+...cketService, 
+Ticket } from [32m'..
+/../../core/services/t
+icket.service'[37m;
+        Γò╡           
+                    [
+32m~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~[
+0m
+
+
+[31mX [41;31m[[41;9
+7mERROR[41;31m][0m 
+[1mTS2307: Cannot 
+find module '../../../
+core/services/auth.ser
+vice' or its 
+corresponding type 
+declarations.[0m 
+[1m[35m[plugin 
+angular-compiler][0m
+
+    src/app/features/d
+ashboard/dashboard.com
+ponent.ts:6:28:
+[37m      6 Γöé 
+import { AuthService 
+} from [32m'../../../
+core/services/auth.ser
+vice'[37m;
+        Γò╡           
+                  [32
+m~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~[0m
+
+
+[31mX [41;31m[[41;9
+7mERROR[41;31m][0m 
+[1mNG2003: No 
+suitable injection 
+token for parameter 
+'auth' of class 
+'DashboardComponent'.
+  Consider using the 
+@Inject decorator to 
+specify an injection 
+token.[0m 
+[1m[35m[plugin 
+angular-compiler][0m
+
+    src/app/features/d
+ashboard/dashboard.com
+ponent.ts:119:15:
+[37m      119 Γöé    
+     public 
+[32mauth[37m: 
+AuthService,
+          Γò╡         
+       [32m~~~~[0m
+
+  This type does not 
+have a value, so it 
+cannot be used as 
+injection token.
+
+    src/app/features/d
+ashboard/dashboard.com
+ponent.ts:119:21:
+[37m      119 Γöé    
+     public auth: 
+[32mAuthService[37m,
+          Γò╡         
+             
+[32m~~~~~~~~~~~[0m
+
+
+[31mX [41;31m[[41;9
+7mERROR[41;31m][0m 
+[1mTS7006: Parameter 
+'events' implicitly 
+has an 'any' 
+type.[0m 
+[1m[35m[plugin 
+angular-compiler][0m
+
+    src/app/features/d
+ashboard/dashboard.com
+ponent.ts:126:19:
+[37m      126 Γöé    
+         next: 
+([32mevents[37m) => 
+this.myEvents = 
+events,
+          Γò╡         
+           
+[32m~~~~~~[0m
+
+
+[31mX [41;31m[[41;9
+7mERROR[41;31m][0m 
+[1mTS7006: Parameter 
+'tickets' implicitly 
+has an 'any' 
+type.[0m 
+[1m[35m[plugin 
+angular-compiler][0m
+
+    src/app/features/d
+ashboard/dashboard.com
+ponent.ts:130:19:
+[37m      130 Γöé    
+         next: 
+([32mtickets[37m) 
+=> this.myTickets = 
+tickets,
+          Γò╡         
+           
+[32m~~~~~~~[0m
+
+
+[31mX [41;31m[[41;9
+7mERROR[41;31m][0m 
+[1mTS2307: Cannot 
+find module '../../cor
+e/services/auth.servic
+e' or its 
+corresponding type 
+declarations.[0m 
+[1m[35m[plugin 
+angular-compiler][0m
+
+    src/app/shared/com
+ponents/navbar/navbar.
+component.ts:4:28:
+[37m      4 Γöé 
+import { AuthService 
+} from [32m'../../cor
+e/services/auth.servic
+e'[37m;
+        Γò╡           
+                  [32
+m~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~[0m
+
+
+[31mX [41;31m[[41;9
+7mERROR[41;31m][0m 
+[1mNG2003: No 
+suitable injection 
+token for parameter 
+'auth' of class 
+'NavbarComponent'.
+  Consider using the 
+@Inject decorator to 
+specify an injection 
+token.[0m 
+[1m[35m[plugin 
+angular-compiler][0m
+
+    src/app/shared/com
+ponents/navbar/navbar.
+component.ts:133:23:
+[37m      133 Γöé    
+ constructor(public 
+[32mauth[37m: 
+AuthService) { }
+          Γò╡         
+               
+[32m~~~~[0m
+
+  This type does not 
+have a value, so it 
+cannot be used as 
+injection token.
+
+    src/app/shared/com
+ponents/navbar/navbar.
+component.ts:133:29:
+[37m      133 Γöé    
+ constructor(public 
+auth: [32mAuthService
+[37m) { }
+          Γò╡         
+                     
+[32m~~~~~~~~~~~[0m
+
+
+[31mX [41;31m[[41;9
+7mERROR[41;31m][0m 
+[1mCould not resolve 
+"../../environments/en
+vironment"[0m
+
+    src/app/core/servi
+ces/analytics.service.
+ts:3:28:
+[37m      3 Γöé 
+import { environment 
+} from [32m'../../env
+ironments/environment'
+[37m;
+        Γò╡           
+                  [32
+m~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~[0m
+
+
+[31mX [41;31m[[41;9
+7mERROR[41;31m][0m 
+[1mCould not resolve 
+"../../environments/en
+vironment"[0m
+
+    src/app/core/servi
+ces/auth.service.ts:4:
+28:
+[37m      4 Γöé 
+import { environment 
+} from [32m'../../env
+ironments/environment'
+[37m;
+        Γò╡           
+                  [32
+m~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~[0m
+
+
+[31mX [41;31m[[41;9
+7mERROR[41;31m][0m 
+[1mCould not resolve 
+"../../environments/en
+vironment"[0m
+
+    src/app/core/servi
+ces/event.service.ts:4
+:28:
+[37m      4 Γöé 
+import { environment 
+} from [32m'../../env
+ironments/environment'
+[37m;
+        Γò╡           
+                  [32
+m~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~[0m
+
+
+[31mX [41;31m[[41;9
+7mERROR[41;31m][0m 
+[1mCould not resolve 
+"../../environments/en
+vironment"[0m
+
+    src/app/core/servi
+ces/ticket.service.ts:
+4:28:
+[37m      4 Γöé 
+import { environment 
+} from [32m'../../env
+ironments/environment'
+[37m;
+        Γò╡           
+                  [32
+m~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~[0m
+
+[39m[22m

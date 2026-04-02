@@ -1,0 +1,122 @@
+use chrono::{DateTime, Utc};
+use serde::{Deserialize, Serialize};
+use sqlx::FromRow;
+use uuid::Uuid;
+
+#[derive(Debug, Clone, Serialize, Deserialize, FromRow)]
+pub struct Ticket {
+    pub id: Uuid,
+    pub order_id: Uuid,
+    pub event_id: Uuid,
+    pub seat_id: Option<Uuid>,
+    pub user_id: Uuid,
+    pub qr_code_data: String,
+    pub ticket_type: String,
+    pub status: String,
+    pub refund_status: String,
+    pub scanned_at: Option<DateTime<Utc>>,
+    pub created_at: DateTime<Utc>,
+    pub cancellation_type: String,
+    // Transfer fields
+    pub transfer_status: String,
+    pub transferred_to_name: Option<String>,
+    pub transferred_to_phone: Option<String>,
+    pub transferred_to_email: Option<String>,
+    pub original_user_id: Option<Uuid>,
+    pub transferred_at: Option<DateTime<Utc>>,
+    // Joined fields
+    #[sqlx(default)]
+    pub event_title: Option<String>,
+    #[sqlx(default)]
+    pub event_date: Option<DateTime<Utc>>,
+    #[sqlx(default)]
+    pub event_refund_policy: Option<String>,
+    #[sqlx(default)]
+    pub event_ticket_price: Option<rust_decimal::Decimal>,
+    #[sqlx(default)]
+    pub event_vip_price: Option<rust_decimal::Decimal>,
+    #[sqlx(default)]
+    pub event_status: Option<String>,
+    #[sqlx(default)]
+    pub event_image: Option<String>,
+    #[sqlx(default)]
+    pub event_location: Option<String>,
+    #[sqlx(default)]
+    pub google_maps_url: Option<String>,
+    #[sqlx(default)]
+    pub seat_label: Option<String>,
+    #[sqlx(default)]
+    pub sender_name: Option<String>,
+}
+
+#[derive(Debug, Serialize)]
+pub struct CancellationPreview {
+    pub ticket_id: Uuid,
+    pub can_cancel: bool,
+    pub refundable: bool,
+    pub refund_amount: rust_decimal::Decimal,
+    pub refund_status_after_cancel: String,
+    pub reason: String,
+}
+
+#[derive(Debug, Serialize)]
+pub struct CancellationResult {
+    pub ticket_id: Uuid,
+    pub status: String,
+    pub refund_status: String,
+    pub refund_amount: rust_decimal::Decimal,
+    pub message: String,
+}
+
+#[derive(Debug, Deserialize)]
+pub struct PurchaseRequest {
+    pub event_id: Uuid,
+    pub quantity: i32,
+    pub ticket_type: Option<String>,
+    pub seat_ids: Option<Vec<Uuid>>,
+}
+
+#[derive(Debug, Deserialize)]
+pub struct ValidateRequest {
+    pub qr_data: String,
+}
+
+#[derive(Debug, Serialize)]
+pub struct ValidateResponse {
+    pub valid: bool,
+    pub message: String,
+    pub ticket_id: Option<Uuid>,
+    pub event_title: Option<String>,
+    pub attendee_name: Option<String>,
+}
+
+#[derive(Debug, Serialize)]
+pub struct TicketWithQr {
+    pub ticket: Ticket,
+    pub qr_image_base64: String,
+    pub event_title: String,
+    pub event_image: Option<String>,
+    pub event_date: DateTime<Utc>,
+    pub gate_opens_at: Option<DateTime<Utc>>,
+    pub seat_label: Option<String>,
+    pub event_status: Option<String>,
+}
+
+#[derive(Debug, Deserialize)]
+pub struct HoldRequest {
+    pub quantity: i32,
+}
+
+#[derive(Debug, Serialize)]
+pub struct HoldResponse {
+    pub hold_id: Uuid,
+    pub quantity: i32,
+    pub expires_at: DateTime<Utc>,
+}
+
+#[derive(Debug, Deserialize)]
+pub struct TransferRequest {
+    pub recipient_name: String,
+    pub recipient_phone: String,
+    pub recipient_email: String,
+}
